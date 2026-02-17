@@ -4,6 +4,11 @@ sources:
     schema: jaffle_shop #by default assumes schema name as source name so this step is redundant, but still a good practice
     tables:
       - name: customers
+        columns:
+          - name: id
+            data_tests:
+              - unique
+              - not_null
       - name: orders
         config:
           freshness:
